@@ -1,0 +1,602 @@
+[
+    {
+        "label": "E",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "heapq",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "heapq",
+        "description": "heapq",
+        "detail": "heapq",
+        "documentation": {}
+    },
+    {
+        "label": "operator",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "operator",
+        "description": "operator",
+        "detail": "operator",
+        "documentation": {}
+    },
+    {
+        "label": "stack",
+        "importPath": "inspect",
+        "description": "inspect",
+        "isExtraImport": true,
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Google.Min Amplitude",
+        "description": "Google.Min Amplitude",
+        "peekOfCode": "class Solution:\n    def minDifference(self, nums: List[int]) -> int:\n        if len(nums) <= 4:\n            return 0\n        nums.sort()\n        return min(nums[-1] - nums[3], nums[-2] - nums[2], nums[-3] - nums[1], nums[-4] - nums[0])",
+        "detail": "Google.Min Amplitude",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Google.Ways to Split String",
+        "description": "Google.Ways to Split String",
+        "peekOfCode": "class Solution:\n    def numSplits(self, s: str) -> int:\n            res = 0\n            f_right, f_left = {}, {}\n            for c in s:\n                f_right[c] = 1 + f_right.get(c, 0)\n            print(f_right)\n            for c in s:\n                f_left[c] = 1 + f_left.get(c, 0)\n                f_right[c] -= 1",
+        "detail": "Google.Ways to Split String",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "Linked List.LL_add_two_numbers",
+        "description": "Linked List.LL_add_two_numbers",
+        "peekOfCode": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\nclass Solution:\n    def sumListValues(self, l):\n        if not l:\n            return ''\n        return str(l.val) + self.sumListValues(l.next)\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:",
+        "detail": "Linked List.LL_add_two_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.LL_add_two_numbers",
+        "description": "Linked List.LL_add_two_numbers",
+        "peekOfCode": "class Solution:\n    def sumListValues(self, l):\n        if not l:\n            return ''\n        return str(l.val) + self.sumListValues(l.next)\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:\n        val1 = int(str(self.sumListValues(l1))[::-1])\n        val2 = int(str(self.sumListValues(l2))[::-1])\n        result =  str(val1 + val2)\n        root = None",
+        "detail": "Linked List.LL_add_two_numbers",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.[old] partition_list",
+        "description": "Linked List.[old] partition_list",
+        "peekOfCode": "class Solution:\n    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:\n        before = []\n        after = []\n        curr = head\n        flag = False\n        # If empty or single element\n        if not head or not head.next:\n            return head\n        # find x head and split between before and after",
+        "detail": "Linked List.[old] partition_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.[old] reverse_nodes_in_kth_group",
+        "description": "Linked List.[old] reverse_nodes_in_kth_group",
+        "peekOfCode": "class Solution:\n    def traverse(self, head):\n        if not head:\n            return []\n        return [head.val] + self.traverse(head.next)\n    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\n        values = []\n        items = self.traverse(head)\n        val = []\n        n = len(items)",
+        "detail": "Linked List.[old] reverse_nodes_in_kth_group",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n        self.height = 1\n# AVL tree class which supports the\n# Insert operation\nclass AVL_Tree(object):\n    # Recursive function to insert key in",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "AVL_Tree",
+        "kind": 6,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "class AVL_Tree(object):\n    # Recursive function to insert key in\n    # subtree rooted with node and returns\n    # new root of subtree.\n    def insert(self, root, key):\n        # Step 1 - Perform normal BST\n        if not root:\n            return TreeNode(key)\n        elif key < root.val:\n            root.left = self.insert(root.left, key)",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "myTree",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "myTree = AVL_Tree()\nroot = None\nroot = myTree.insert(root, 10)\nroot = myTree.insert(root, 20)\nroot = myTree.insert(root, 30)\nroot = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = None\nroot = myTree.insert(root, 10)\nroot = myTree.insert(root, 20)\nroot = myTree.insert(root, 30)\nroot = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 10)\nroot = myTree.insert(root, 20)\nroot = myTree.insert(root, 30)\nroot = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 20)\nroot = myTree.insert(root, 30)\nroot = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))\n# This code is contributed by Ajitesh Pathak",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 30)\nroot = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))\n# This code is contributed by Ajitesh Pathak",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 40)\nroot = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))\n# This code is contributed by Ajitesh Pathak",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 50)\nroot = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))\n# This code is contributed by Ajitesh Pathak",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "Linked List.avl-tree",
+        "description": "Linked List.avl-tree",
+        "peekOfCode": "root = myTree.insert(root, 25)\n# Preorder Traversal\nprint(\"Preorder traversal of the\",\n      \"constructed AVL tree is\")\nprint(myTree.preOrder(root))\n# This code is contributed by Ajitesh Pathak",
+        "detail": "Linked List.avl-tree",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "Linked List.binary-search-tree",
+        "description": "Linked List.binary-search-tree",
+        "peekOfCode": "class Node:\n    def __init__(self, key) -> None:\n        self.left = None\n        self.key = key\n        self.right = None\nclass BinarySearchTree:\n    r = None\n    def __init__(self, items=[]) -> None:\n        assert len(items), \"Empty list of items\"\n        for (i, key) in enumerate(items):",
+        "detail": "Linked List.binary-search-tree",
+        "documentation": {}
+    },
+    {
+        "label": "BinarySearchTree",
+        "kind": 6,
+        "importPath": "Linked List.binary-search-tree",
+        "description": "Linked List.binary-search-tree",
+        "peekOfCode": "class BinarySearchTree:\n    r = None\n    def __init__(self, items=[]) -> None:\n        assert len(items), \"Empty list of items\"\n        for (i, key) in enumerate(items):\n            if i is 0:\n                self.r = self.insert(root=None, key=key)\n            else:\n                if self.r.key == key:\n                    return self.r",
+        "detail": "Linked List.binary-search-tree",
+        "documentation": {}
+    },
+    {
+        "label": "findLowIndex",
+        "kind": 2,
+        "importPath": "Linked List.find_low_high_index",
+        "description": "Linked List.find_low_high_index",
+        "peekOfCode": "def findLowIndex(A, key):\n    low = 0\n    high = len(A) - 1\n    mid = high // 2\n    while low <= high:\n        midValue = A[mid]\n        if midValue < key:\n            low = mid + 1\n        else:\n            high = mid - 1",
+        "detail": "Linked List.find_low_high_index",
+        "documentation": {}
+    },
+    {
+        "label": "findHighIndex",
+        "kind": 2,
+        "importPath": "Linked List.find_low_high_index",
+        "description": "Linked List.find_low_high_index",
+        "peekOfCode": "def findHighIndex(A, key):\n    low = 0\n    high = len(A) - 1\n    mid = high // 2\n    while low <= high:\n        midValue = A[mid]\n        if midValue <= key:\n            low = mid + 1\n        else:\n            high = mid - 1",
+        "detail": "Linked List.find_low_high_index",
+        "documentation": {}
+    },
+    {
+        "label": "Graph",
+        "kind": 6,
+        "importPath": "Linked List.graph",
+        "description": "Linked List.graph",
+        "peekOfCode": "class Graph:\n    def __init__(self, graph):\n        if not graph:\n            graph = {}\n        self.graph = graph\n    def getVertices(self):\n        return self.graph.keys()\n    def getEdges(self):\n        edges = []\n        for vertex in self.graph:",
+        "detail": "Linked List.graph",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "Linked List.heap_tree",
+        "description": "Linked List.heap_tree",
+        "peekOfCode": "class Node:\n    def __init__(self, key):\n        self.right = None\n        self.value = key\n        self.left = None\nclass HeapTree:\n    def left(self, k):\n        return 2*k + 1\n    def right(self, k):\n        return 2*k + 2",
+        "detail": "Linked List.heap_tree",
+        "documentation": {}
+    },
+    {
+        "label": "HeapTree",
+        "kind": 6,
+        "importPath": "Linked List.heap_tree",
+        "description": "Linked List.heap_tree",
+        "peekOfCode": "class HeapTree:\n    def left(self, k):\n        return 2*k + 1\n    def right(self, k):\n        return 2*k + 2\n    def max_heapify(self, A, k):\n        l = self.left(k)\n        r = self.right(k)\n        largest = k\n        if l < len(A) and A[l] > A[k]:",
+        "detail": "Linked List.heap_tree",
+        "documentation": {}
+    },
+    {
+        "label": "knapsack",
+        "kind": 2,
+        "importPath": "Linked List.knapsack-0-1",
+        "description": "Linked List.knapsack-0-1",
+        "peekOfCode": "def knapsack(C, wt, val, n):\n    if not n or not C:\n        return 0\n    # If weight is more than Capacity we cannot pick that item. So need to ignore the weight\n    if wt[n - 1] > C:\n        return knapsack(C, wt, val, n-1)\n    else:\n        return max(val[n-1] + knapsack(C - wt[n - 1], wt, val, n - 1), knapsack(C, wt, val, n - 1))\nif __name__ == \"__main__\":\n    # Items value and weight",
+        "detail": "Linked List.knapsack-0-1",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "Linked List.knapsack_fractional",
+        "description": "Linked List.knapsack_fractional",
+        "peekOfCode": "class Item:\n    def __init__(self, wt, val, index):\n        self.wt = wt\n        self.val = val\n        self.index = index\n        self.cost = val // wt\n    def __lt__(self, other):\n        return self.cost < other.cost\ndef getMaxValue(C, wt, val):\n    items = []",
+        "detail": "Linked List.knapsack_fractional",
+        "documentation": {}
+    },
+    {
+        "label": "getMaxValue",
+        "kind": 2,
+        "importPath": "Linked List.knapsack_fractional",
+        "description": "Linked List.knapsack_fractional",
+        "peekOfCode": "def getMaxValue(C, wt, val):\n    items = []\n    for i in range(len(wt)):\n        items.append(Item(wt[i], val[i], i))\n    # sorting items by cost\n    items.sort(reverse=True)\n    totalValue = 0\n    for item in items:\n        curWt = int(item.wt)\n        curVal = int(item.val)",
+        "detail": "Linked List.knapsack_fractional",
+        "documentation": {}
+    },
+    {
+        "label": "LRU",
+        "kind": 6,
+        "importPath": "Linked List.lru_cache",
+        "description": "Linked List.lru_cache",
+        "peekOfCode": "class LRU:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = set()\n        self.cache_vals = LinkedList()\n    def get(self, value):\n        if value not in self.cache:\n            return None\n        else:\n            return self.cache_vals.index(value) ",
+        "detail": "Linked List.lru_cache",
+        "documentation": {}
+    },
+    {
+        "label": "LinkedList",
+        "kind": 5,
+        "importPath": "Linked List.lru_cache",
+        "description": "Linked List.lru_cache",
+        "peekOfCode": "LinkedList = collections.deque\nclass LRU:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = set()\n        self.cache_vals = LinkedList()\n    def get(self, value):\n        if value not in self.cache:\n            return None\n        else:",
+        "detail": "Linked List.lru_cache",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.merge_k_sorted_lists",
+        "description": "Linked List.merge_k_sorted_lists",
+        "peekOfCode": "class Solution:\n    def traverse(self, node):\n        if not node:\n            return []\n        return [node.val] + self.traverse(node.next)\n    def merge(self, h1, h2):\n        if not h1:\n            return h2\n        if not h2:\n            return h1",
+        "detail": "Linked List.merge_k_sorted_lists",
+        "documentation": {}
+    },
+    {
+        "label": "Pair",
+        "kind": 6,
+        "importPath": "Linked List.merge_overlapping_intervals",
+        "description": "Linked List.merge_overlapping_intervals",
+        "peekOfCode": "class Pair:\n    def __init__(self, first, second):\n        self.first = first\n        self.second = second\n    def __str__(self) -> str:\n        return str(self.first) + \" \" + str(self.second)\ndef mergeOverlappingIntervals(A):\n    result = []\n    result.append(A[0])\n    for i in range(1, len(A)):",
+        "detail": "Linked List.merge_overlapping_intervals",
+        "documentation": {}
+    },
+    {
+        "label": "mergeOverlappingIntervals",
+        "kind": 2,
+        "importPath": "Linked List.merge_overlapping_intervals",
+        "description": "Linked List.merge_overlapping_intervals",
+        "peekOfCode": "def mergeOverlappingIntervals(A):\n    result = []\n    result.append(A[0])\n    for i in range(1, len(A)):\n        # Looped interval\n        fi = A[i].first\n        si = A[i].second\n        # Last selected Interval\n        f = result[len(result) - 1].first\n        s = result[len(result) - 1].second",
+        "detail": "Linked List.merge_overlapping_intervals",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.merge_two_sorted_list_best_case",
+        "description": "Linked List.merge_two_sorted_list_best_case",
+        "peekOfCode": "class Solution:\n    def merge(self, h1, h2):\n        if not h1:\n            return h2\n        if not h2:\n            return h1\n        if h1.val < h2.val:\n            h1.next = self.merge(h1.next, h2)\n            return h1\n        else:",
+        "detail": "Linked List.merge_two_sorted_list_best_case",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.merge_two_sorted_list_with_list",
+        "description": "Linked List.merge_two_sorted_list_with_list",
+        "peekOfCode": "class Solution:\n    def traverse(self, l):\n        if not l:\n            return []\n        return [l] + self.traverse(l.next)        \n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        result = self.traverse(list1) + self.traverse(list2)\n        result.sort(key=getKey)\n        for i in range(len(result) - 1):\n            result[i].next = result[i+1]",
+        "detail": "Linked List.merge_two_sorted_list_with_list",
+        "documentation": {}
+    },
+    {
+        "label": "getKey",
+        "kind": 2,
+        "importPath": "Linked List.merge_two_sorted_list_with_list",
+        "description": "Linked List.merge_two_sorted_list_with_list",
+        "peekOfCode": "def getKey(node):\n    return node.val\nclass Solution:\n    def traverse(self, l):\n        if not l:\n            return []\n        return [l] + self.traverse(l.next)        \n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n        result = self.traverse(list1) + self.traverse(list2)\n        result.sort(key=getKey)",
+        "detail": "Linked List.merge_two_sorted_list_with_list",
+        "documentation": {}
+    },
+    {
+        "label": "moveZeros",
+        "kind": 2,
+        "importPath": "Linked List.move_zeros_to_left",
+        "description": "Linked List.move_zeros_to_left",
+        "peekOfCode": "def moveZeros(A):\n    l = len(A)\n    read = l - 1\n    write = l - 1\n    while(read >= 0):\n        print(\"read\", read, A[read])\n        if A[read] != 0:\n            print(\"write\", write, A[write])\n            temp = A[write]\n            A[write] = A[read]",
+        "detail": "Linked List.move_zeros_to_left",
+        "documentation": {}
+    },
+    {
+        "label": "evaluatePostfixExpression",
+        "kind": 2,
+        "importPath": "Linked List.postfix-evaluation",
+        "description": "Linked List.postfix-evaluation",
+        "peekOfCode": "def evaluatePostfixExpression(E=[]):\n    # Initialization\n    stack = []\n    assert len(E), \"No expression detected\"\n    for value in E:\n        # Check Operand\n        print(value, stack, len(stack))\n        if isinstance(value, int):\n            stack.append(int(value))\n            pass",
+        "detail": "Linked List.postfix-evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "operators",
+        "kind": 5,
+        "importPath": "Linked List.postfix-evaluation",
+        "description": "Linked List.postfix-evaluation",
+        "peekOfCode": "operators = {\n    \"+\": operator.add,\n    \"-\": operator.sub,\n    \"*\": operator.mul,\n    \"/\": operator.truediv,\n    \"%\": operator.mod,\n    \"^\": operator.xor\n}\ndef evaluatePostfixExpression(E=[]):\n    # Initialization",
+        "detail": "Linked List.postfix-evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.remove_duplicate_with_sorted_list",
+        "description": "Linked List.remove_duplicate_with_sorted_list",
+        "peekOfCode": "class Solution:\n    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        ref = set()\n        current = head\n        while current:\n            ref.add(current.val)\n            current = current.next\n        ref = list(ref)\n        ref.sort()\n        root = None",
+        "detail": "Linked List.remove_duplicate_with_sorted_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.remove_duplicates_and_get_unique_list_items",
+        "description": "Linked List.remove_duplicates_and_get_unique_list_items",
+        "peekOfCode": "class Solution:\n    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        ref = {}\n        current = head\n        while current:\n            key = current.val\n            if key in ref:\n                ref[key] = ref[key] + 1\n            else:\n                ref[key] = 1",
+        "detail": "Linked List.remove_duplicates_and_get_unique_list_items",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.reverse_linked_list",
+        "description": "Linked List.reverse_linked_list",
+        "peekOfCode": "class Solution:\n    def reverse(self, head):\n        prev = None\n        current = head\n        while current:\n            next = current.next\n            current.next = prev\n            prev = current\n            current = next\n        return prev",
+        "detail": "Linked List.reverse_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.reverse_linked_list_2",
+        "description": "Linked List.reverse_linked_list_2",
+        "peekOfCode": "class Solution:\n    def reverse(self, head, start, end):\n        prev = None\n        current = head\n        while current and end > 0:\n            next = current.next\n            if start == 1:\n                current.next = prev\n                prev = current\n            else:",
+        "detail": "Linked List.reverse_linked_list_2",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.reverse_nodes_in_kth_group",
+        "description": "Linked List.reverse_nodes_in_kth_group",
+        "peekOfCode": "class Solution:\n    def reverse(self, head, k):\n        if not head:\n            return head\n        current = head\n        prev = None\n        next = None\n        count = 0\n        # validate do we have k elements in head or not\n        while current is not None and count < k:",
+        "detail": "Linked List.reverse_nodes_in_kth_group",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.rotate_list_kth",
+        "description": "Linked List.rotate_list_kth",
+        "peekOfCode": "class Solution:\n    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:\n        current = head\n        l = 1\n        # validate whether list is not blank or single element\n        if not current or not current.next:\n            return head\n        # go to the last element\n        while current.next:\n            current = current.next",
+        "detail": "Linked List.rotate_list_kth",
+        "documentation": {}
+    },
+    {
+        "label": "ListStack",
+        "kind": 6,
+        "importPath": "Linked List.stack",
+        "description": "Linked List.stack",
+        "peekOfCode": "class ListStack:\n    stack = []\n    _size = 0\n    _top = -1\n    def __init__(self, size):\n        self._size = size\n    def __str__(self):\n        assert not self.isEmpty(), \"Stack is empty\"\n        return ', '.join(list(map(str, self.stack[:self._top+1])))\n        # return ', '.join([str(self.stack[value]) for value in range(0, self._top + 1)])",
+        "detail": "Linked List.stack",
+        "documentation": {}
+    },
+    {
+        "label": "split",
+        "kind": 2,
+        "importPath": "Linked List.string_methods",
+        "description": "Linked List.string_methods",
+        "peekOfCode": "def split(word):\n    return [char for char in word]\n# If pattern for split\nprint(a.split(\" \"))",
+        "detail": "Linked List.string_methods",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Linked List.string_methods",
+        "description": "Linked List.string_methods",
+        "peekOfCode": "a = \"102\"\na = a[::-1]\n## Split and convert to list\n# If no white spaces\nprint(list(map(int, a)))\ndef split(word):\n    return [char for char in word]\n# If pattern for split\nprint(a.split(\" \"))",
+        "detail": "Linked List.string_methods",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Linked List.string_methods",
+        "description": "Linked List.string_methods",
+        "peekOfCode": "a = a[::-1]\n## Split and convert to list\n# If no white spaces\nprint(list(map(int, a)))\ndef split(word):\n    return [char for char in word]\n# If pattern for split\nprint(a.split(\" \"))",
+        "detail": "Linked List.string_methods",
+        "documentation": {}
+    },
+    {
+        "label": "sumOfTwo",
+        "kind": 2,
+        "importPath": "Linked List.sum_of_two_values",
+        "description": "Linked List.sum_of_two_values",
+        "peekOfCode": "def sumOfTwo(A, val):\n    s = set()\n    for a in A:\n        if val - a in s:\n            return True\n        s.add(a)\n    return False\nif __name__ == \"__main__\":\n    v = [5, 7, 1, 2, 8, 4, 3]\n    test = [3, 20, 1, 2, 7]",
+        "detail": "Linked List.sum_of_two_values",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Linked List.swap_nodes_in_pair",
+        "description": "Linked List.swap_nodes_in_pair",
+        "peekOfCode": "class Solution:\n    def swap(self, head):\n        if not head:\n            return head\n        if head.next:\n            next = head.next.next\n            temp = head.next\n            head.next = self.swap(next)\n            temp.next = head\n            return temp",
+        "detail": "Linked List.swap_nodes_in_pair",
+        "documentation": {}
+    },
+    {
+        "label": "computeLPSArray",
+        "kind": 2,
+        "importPath": "String.KMP_pattern_search",
+        "description": "String.KMP_pattern_search",
+        "peekOfCode": "def computeLPSArray(pat, pattern_len, lps):\n    # length of the previous longest predix suffix\n    len = 0\n    # lps[0] is always 0\n    lps[0]\n    i = 1\n    while i < pattern_len:\n        if pat[i] == pat[len]:\n            len += 1\n            lps[i] = len",
+        "detail": "String.KMP_pattern_search",
+        "documentation": {}
+    },
+    {
+        "label": "KMPSearch",
+        "kind": 2,
+        "importPath": "String.KMP_pattern_search",
+        "description": "String.KMP_pattern_search",
+        "peekOfCode": "def KMPSearch(pat, text):\n    pattern_len = len(pat)\n    text_len = len(text)\n    # create lps (longest prefix suffix)\n    lps = [0]*pattern_len\n    # index for the pattern\n    j = 0\n    # preprocess the pattern\n    computeLPSArray(pat, pattern_len, lps)\n    # index of text",
+        "detail": "String.KMP_pattern_search",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "String.rabin_karp_pattern_search",
+        "description": "String.rabin_karp_pattern_search",
+        "peekOfCode": "def search(pat, txt, q):\n    M = len(pat)\n    N = len(txt)\n    i = 0  # index for pattern\n    j = 0  # index for text\n    p = 0  # hash value for pattern\n    t = 0  # hash value for text\n    h = 1  #\n    for i in range(M-1):\n        h = (h*NO_OF_CHARS) % q",
+        "detail": "String.rabin_karp_pattern_search",
+        "documentation": {}
+    },
+    {
+        "label": "NO_OF_CHARS",
+        "kind": 5,
+        "importPath": "String.rabin_karp_pattern_search",
+        "description": "String.rabin_karp_pattern_search",
+        "peekOfCode": "NO_OF_CHARS = 256\ndef search(pat, txt, q):\n    M = len(pat)\n    N = len(txt)\n    i = 0  # index for pattern\n    j = 0  # index for text\n    p = 0  # hash value for pattern\n    t = 0  # hash value for text\n    h = 1  #\n    for i in range(M-1):",
+        "detail": "String.rabin_karp_pattern_search",
+        "documentation": {}
+    },
+    {
+        "label": "txt",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "txt = \"The rain in Spain\"\nx = re.search(\"rain\", txt)\ny = re.findall(\"rain\", txt)\nz = re.split(\"\\s\", txt)\nz2 = re.split(\"\\s\", txt, 1)\n# Replace all white replacements with 9\na = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "x = re.search(\"rain\", txt)\ny = re.findall(\"rain\", txt)\nz = re.split(\"\\s\", txt)\nz2 = re.split(\"\\s\", txt, 1)\n# Replace all white replacements with 9\na = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "y = re.findall(\"rain\", txt)\nz = re.split(\"\\s\", txt)\nz2 = re.split(\"\\s\", txt, 1)\n# Replace all white replacements with 9\na = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)\n    print(x.span())",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "z",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "z = re.split(\"\\s\", txt)\nz2 = re.split(\"\\s\", txt, 1)\n# Replace all white replacements with 9\na = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)\n    print(x.span())\nif y:",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "z2",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "z2 = re.split(\"\\s\", txt, 1)\n# Replace all white replacements with 9\na = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)\n    print(x.span())\nif y:\n    print(y)",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "a = re.sub(\"\\s\", \"9\", txt)\n# Replace the first 2 occurrences:\na2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)\n    print(x.span())\nif y:\n    print(y)\nif z:\n    print(z)",
+        "detail": "String.regex",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "String.regex",
+        "description": "String.regex",
+        "peekOfCode": "a2 = re.sub(\"\\s\", \"9\", txt, 2)\nif x:\n    print(x)\n    print(x.span())\nif y:\n    print(y)\nif z:\n    print(z)\nif z2:\n    print(z2)",
+        "detail": "String.regex",
+        "documentation": {}
+    }
+]
