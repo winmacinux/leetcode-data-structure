@@ -1,10 +1,11 @@
 [
     {
-        "label": "E",
-        "importPath": "tkinter",
-        "description": "tkinter",
+        "label": "sys",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "tkinter",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -13,6 +14,14 @@
         "isExtraImport": true,
         "importPath": "collections",
         "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
         "detail": "collections",
         "documentation": {}
     },
@@ -31,6 +40,22 @@
         "importPath": "heapq",
         "description": "heapq",
         "detail": "heapq",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "heapq",
+        "description": "heapq",
+        "isExtraImport": true,
+        "detail": "heapq",
+        "documentation": {}
+    },
+    {
+        "label": "E",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
         "documentation": {}
     },
     {
@@ -60,12 +85,282 @@
         "documentation": {}
     },
     {
+        "label": "bubbleSort",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.BubbleSort",
+        "description": "Arrays.Sortings.BubbleSort",
+        "peekOfCode": "def bubbleSort(arr):\n    n = len(arr)\n    # Traverse through all array elements\n    for i in range(n):\n        # Last i elements are already in place\n        for j in range(0, n-i-1):\n            # traverse the array from 0 to n-i-1\n            # Swap if the element found is greater\n            # than the next element\n            if arr[j] > arr[j+1]:",
+        "detail": "Arrays.Sortings.BubbleSort",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.BubbleSort",
+        "description": "Arrays.Sortings.BubbleSort",
+        "peekOfCode": "arr = [64, 34, 25, 12, 22, 11, 90]\nbubbleSort(arr)\nprint(\"Sorted array is:\")\nfor i in range(len(arr)):\n    print(\"%d\" % arr[i], end=\" \")",
+        "detail": "Arrays.Sortings.BubbleSort",
+        "documentation": {}
+    },
+    {
+        "label": "heapify",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.HeapSort",
+        "description": "Arrays.Sortings.HeapSort",
+        "peekOfCode": "def heapify(arr, n, i):\n    largest = i  # Initialize largest as root\n    l = 2 * i + 1\t # left = 2*i + 1\n    r = 2 * i + 2\t # right = 2*i + 2\n    # See if left child of root exists and is\n    # greater than root\n    if l < n and arr[largest] < arr[l]:\n        largest = l\n    # See if right child of root exists and is\n    # greater than root",
+        "detail": "Arrays.Sortings.HeapSort",
+        "documentation": {}
+    },
+    {
+        "label": "heapSort",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.HeapSort",
+        "description": "Arrays.Sortings.HeapSort",
+        "peekOfCode": "def heapSort(arr):\n    n = len(arr)\n    # Build a maxheap.\n    for i in range(n//2 - 1, -1, -1):\n        heapify(arr, n, i)\n    # One by one extract elements\n    for i in range(n-1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]  # swap\n        heapify(arr, i, 0)\n# Driver code",
+        "detail": "Arrays.Sortings.HeapSort",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.HeapSort",
+        "description": "Arrays.Sortings.HeapSort",
+        "peekOfCode": "arr = [12, 11, 13, 5, 6, 7]\nheapSort(arr)\nn = len(arr)\nprint(\"Sorted array is\")\nfor i in range(n):\n    print(\"%d\" % arr[i], end=\" \")\n# This code is contributed by Mohit Kumra",
+        "detail": "Arrays.Sortings.HeapSort",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.HeapSort",
+        "description": "Arrays.Sortings.HeapSort",
+        "peekOfCode": "n = len(arr)\nprint(\"Sorted array is\")\nfor i in range(n):\n    print(\"%d\" % arr[i], end=\" \")\n# This code is contributed by Mohit Kumra",
+        "detail": "Arrays.Sortings.HeapSort",
+        "documentation": {}
+    },
+    {
+        "label": "insertionSort",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.InsertionSort",
+        "description": "Arrays.Sortings.InsertionSort",
+        "peekOfCode": "def insertionSort(arr):\n    # Traverse through 1 to len(arr)\n    for i in range(1, len(arr)):\n        key = arr[i]\n        # Move elements of arr[0..i-1], that are\n        # greater than key, to one position ahead\n        # of their current position\n        j = i-1\n        while j >= 0 and key < arr[j]:\n            arr[j + 1] = arr[j]",
+        "detail": "Arrays.Sortings.InsertionSort",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.InsertionSort",
+        "description": "Arrays.Sortings.InsertionSort",
+        "peekOfCode": "arr = [12, 11, 13, 5, 6]\ninsertionSort(arr)\nfor i in range(len(arr)):\n    print(\"% d\" % arr[i])",
+        "detail": "Arrays.Sortings.InsertionSort",
+        "documentation": {}
+    },
+    {
+        "label": "mergeSort",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.MergeSort",
+        "description": "Arrays.Sortings.MergeSort",
+        "peekOfCode": "def mergeSort(arr):\n    if len(arr) > 1:\n        # Finding the mid of the array\n        mid = len(arr)//2\n        # Dividing the array elements\n        L = arr[:mid]\n        # into 2 halves\n        R = arr[mid:]\n        # Sorting the first half\n        mergeSort(L)",
+        "detail": "Arrays.Sortings.MergeSort",
+        "documentation": {}
+    },
+    {
+        "label": "printList",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.MergeSort",
+        "description": "Arrays.Sortings.MergeSort",
+        "peekOfCode": "def printList(arr):\n    for i in range(len(arr)):\n        print(arr[i], end=\" \")\n    print()\n# Driver Code\nif __name__ == '__main__':\n    arr = [12, 11, 13, 5, 6, 7]\n    print(\"Given array is\", end=\"\\n\")\n    printList(arr)\n    mergeSort(arr)",
+        "detail": "Arrays.Sortings.MergeSort",
+        "documentation": {}
+    },
+    {
+        "label": "partition",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.QuickSort",
+        "description": "Arrays.Sortings.QuickSort",
+        "peekOfCode": "def partition(array, low, high):\n    # Choose the rightmost element as pivot\n    pivot = array[high]\n    # Pointer for greater element\n    i = low - 1\n    # Traverse through all elements\n    # compare each element with pivot\n    for j in range(low, high):\n        if array[j] <= pivot:\n            # If element smaller than pivot is found",
+        "detail": "Arrays.Sortings.QuickSort",
+        "documentation": {}
+    },
+    {
+        "label": "quick_sort",
+        "kind": 2,
+        "importPath": "Arrays.Sortings.QuickSort",
+        "description": "Arrays.Sortings.QuickSort",
+        "peekOfCode": "def quick_sort(array, low, high):\n    if low < high:\n        # Find pivot element such that\n        # element smaller than pivot are on the left\n        # element greater than pivot are on the right\n        pi = partition(array, low, high)\n        # Recursive call on the left of pivot\n        quick_sort(array, low, pi - 1)\n        # Recursive call on the right of pivot\n        quick_sort(array, pi + 1, high)",
+        "detail": "Arrays.Sortings.QuickSort",
+        "documentation": {}
+    },
+    {
+        "label": "array",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.QuickSort",
+        "description": "Arrays.Sortings.QuickSort",
+        "peekOfCode": "array = [10, 7, 8, 9, 1, 5]\nquick_sort(array, 0, len(array) - 1)\nprint(f'Sorted array: {array}')\n# This code is contributed by Adnan Aliakbar",
+        "detail": "Arrays.Sortings.QuickSort",
+        "documentation": {}
+    },
+    {
+        "label": "A",
+        "kind": 5,
+        "importPath": "Arrays.Sortings.SelectionSort",
+        "description": "Arrays.Sortings.SelectionSort",
+        "peekOfCode": "A = [64, 25, 12, 22, 11]\n# Traverse through all array elements\nfor i in range(len(A)):\n    # Find the minimum element in remaining\n    # unsorted array\n    min_index = i\n    for j in range(i+1, len(A)):\n        if A[min_index] > A[j]:\n            min_index = j\n    # Swap the found minimum element with",
+        "detail": "Arrays.Sortings.SelectionSort",
+        "documentation": {}
+    },
+    {
+        "label": "countSub",
+        "kind": 2,
+        "importPath": "Google.Distinct Subsequences",
+        "description": "Google.Distinct Subsequences",
+        "peekOfCode": "def countSub(s):\n    Map = {}\n    # Iterate from 0 to length of s\n    for i in range(len(s)):\n        Map[s[i]] = -1\n    allCount = 0\n    levelCount = 0\n    # Iterate from 0 to length of s\n    for i in range(len(s)):\n        c = s[i]",
+        "detail": "Google.Distinct Subsequences",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "kind": 5,
+        "importPath": "Google.Distinct Subsequences",
+        "description": "Google.Distinct Subsequences",
+        "peekOfCode": "List = [\"abab\", \"gfg\"]\nfor s in List:\n    cnt = countSub(s)\n    withEmptyString = cnt + 1\n    print(\"With empty string count for\",\n          s, \"is\", withEmptyString)\n    print(\"Without empty string count for\",\n          s, \"is\", cnt)\n# This code is contributed by rag2127",
+        "detail": "Google.Distinct Subsequences",
+        "documentation": {}
+    },
+    {
+        "label": "editDistDP",
+        "kind": 2,
+        "importPath": "Google.Edit Distance",
+        "description": "Google.Edit Distance",
+        "peekOfCode": "def editDistDP(str1, str2, m, n):\n    # Create a table to store results of subproblems\n    dp = [[0 for x in range(n + 1)] for x in range(m + 1)]\n    # Fill d[][] in bottom up manner\n    for i in range(m + 1):\n        for j in range(n + 1):\n            # If first string is empty, only option is to\n            # insert all characters of second string\n            if i == 0:\n                dp[i][j] = j  # Min. operations = j",
+        "detail": "Google.Edit Distance",
+        "documentation": {}
+    },
+    {
+        "label": "str1",
+        "kind": 5,
+        "importPath": "Google.Edit Distance",
+        "description": "Google.Edit Distance",
+        "peekOfCode": "str1 = \"sunday\"\nstr2 = \"saturday\"\nprint(editDistDP(str1, str2, len(str1), len(str2)))\n# This code is contributed by Bhavya Jain",
+        "detail": "Google.Edit Distance",
+        "documentation": {}
+    },
+    {
+        "label": "str2",
+        "kind": 5,
+        "importPath": "Google.Edit Distance",
+        "description": "Google.Edit Distance",
+        "peekOfCode": "str2 = \"saturday\"\nprint(editDistDP(str1, str2, len(str1), len(str2)))\n# This code is contributed by Bhavya Jain",
+        "detail": "Google.Edit Distance",
+        "documentation": {}
+    },
+    {
+        "label": "gas_station",
+        "kind": 2,
+        "importPath": "Google.Gas Station",
+        "description": "Google.Gas Station",
+        "peekOfCode": "def gas_station(gas, cost):\n    begin = 0\n    total = 0\n    fuel = 0\n    for i in range(len(gas)):\n        fuel = fuel + gas[i] - cost[i]\n        if fuel < 0:\n            begin = i+1\n            total = total + fuel\n            fuel = 0",
+        "detail": "Google.Gas Station",
+        "documentation": {}
+    },
+    {
+        "label": "gas",
+        "kind": 5,
+        "importPath": "Google.Gas Station",
+        "description": "Google.Gas Station",
+        "peekOfCode": "gas = [1, 2, 3, 4, 5]\ncost = [3, 4, 5, 1, 2]",
+        "detail": "Google.Gas Station",
+        "documentation": {}
+    },
+    {
+        "label": "cost",
+        "kind": 5,
+        "importPath": "Google.Gas Station",
+        "description": "Google.Gas Station",
+        "peekOfCode": "cost = [3, 4, 5, 1, 2]",
+        "detail": "Google.Gas Station",
+        "documentation": {}
+    },
+    {
+        "label": "findMajority",
+        "kind": 2,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "def findMajority(arr, size):\n\tm = {}\n\tfor i in range(size):\n\t\tif arr[i] in m:\n\t\t\tm[arr[i]] += 1\n\t\telse:\n\t\t\tm[arr[i]] = 1\n\tcount = 0\n\tfor key in m:\n\t\tif m[key] > size / 2:",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "\tm",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "\tm = {}\n\tfor i in range(size):\n\t\tif arr[i] in m:\n\t\t\tm[arr[i]] += 1\n\t\telse:\n\t\t\tm[arr[i]] = 1\n\tcount = 0\n\tfor key in m:\n\t\tif m[key] > size / 2:\n\t\t\tcount = 1",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tm[arr[i]]",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "\t\t\tm[arr[i]] = 1\n\tcount = 0\n\tfor key in m:\n\t\tif m[key] > size / 2:\n\t\t\tcount = 1\n\t\t\tprint(\"Majority found :-\",key)\n\t\t\tbreak\n\tif(count == 0):\n\t\tprint(\"No Majority element\")\n# Driver code",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "\tcount",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "\tcount = 0\n\tfor key in m:\n\t\tif m[key] > size / 2:\n\t\t\tcount = 1\n\t\t\tprint(\"Majority found :-\",key)\n\t\t\tbreak\n\tif(count == 0):\n\t\tprint(\"No Majority element\")\n# Driver code\narr = [2, 2, 2, 2, 5, 5, 2, 3, 3]",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tcount",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "\t\t\tcount = 1\n\t\t\tprint(\"Majority found :-\",key)\n\t\t\tbreak\n\tif(count == 0):\n\t\tprint(\"No Majority element\")\n# Driver code\narr = [2, 2, 2, 2, 5, 5, 2, 3, 3]\nn = len(arr)\n# Function calling\nfindMajority(arr, n)",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "arr = [2, 2, 2, 2, 5, 5, 2, 3, 3]\nn = len(arr)\n# Function calling\nfindMajority(arr, n)\n# This code is contributed by ankush_953\n# Moore voting algorithm\n# # Function to find the candidate for Majority\n# # Complexity Analysis: \n# # Time Complexity: O(n). \n#     # As two traversal of the array is needed, so the time complexity is linear.",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
+        "label": "n",
+        "kind": 5,
+        "importPath": "Google.Majority Element",
+        "description": "Google.Majority Element",
+        "peekOfCode": "n = len(arr)\n# Function calling\nfindMajority(arr, n)\n# This code is contributed by ankush_953\n# Moore voting algorithm\n# # Function to find the candidate for Majority\n# # Complexity Analysis: \n# # Time Complexity: O(n). \n#     # As two traversal of the array is needed, so the time complexity is linear.\n# # Auxiliary Space: O(1). ",
+        "detail": "Google.Majority Element",
+        "documentation": {}
+    },
+    {
         "label": "maximumTime",
         "kind": 2,
         "importPath": "Google.Maximum Time",
         "description": "Google.Maximum Time",
         "peekOfCode": "def maximumTime(s):\n    s = list(s)\n    if s[0] == \"?\":\n        if s[1] == \"?\":\n            s[0] = \"2\"\n            s[1] = \"3\"\n        elif int(s[1]) >= 0 and int(s[1]) < 4:\n            s[0] = \"2\"\n        elif int(s[1]) >= 0 and int(s[1]) <= 9:\n            s[0] = \"1\"",
         "detail": "Google.Maximum Time",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "Google.Maximum size rectangle binary sub-matrix with all 1s",
+        "description": "Google.Maximum size rectangle binary sub-matrix with all 1s",
+        "peekOfCode": "class Solution():\n    def maxHist(self, row):\n        # Create an empty stack. The stack holds\n        # indexes of hist array / The bars stored\n        # in stack are always in increasing order\n        # of their heights.\n        result = []\n        # Top of stack\n        top_val = 0\n        # Initialize max area in current",
+        "detail": "Google.Maximum size rectangle binary sub-matrix with all 1s",
         "documentation": {}
     },
     {
@@ -78,12 +373,129 @@
         "documentation": {}
     },
     {
+        "label": "minJumps",
+        "kind": 2,
+        "importPath": "Google.Min Jump Arrays",
+        "description": "Google.Min Jump Arrays",
+        "peekOfCode": "def minJumps(arr, n):\n    jumps = [0 for i in range(n)]\n    if (n == 0) or (arr[0] == 0):\n        return float('inf')\n    jumps[0] = 0\n    # Find the minimum number of\n    # jumps to reach arr[i] from\n    # arr[0] and assign this\n    # value to jumps[i]\n    for i in range(1, n):",
+        "detail": "Google.Min Jump Arrays",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "Google.Min Jump Arrays",
+        "description": "Google.Min Jump Arrays",
+        "peekOfCode": "arr = [1, 3, 6, 1, 0, 9]\nsize = len(arr)\nprint('Minimum number of jumps to reach',\n      'end is', minJumps(arr, size))\n# This code is contributed by Soumen Ghosh",
+        "detail": "Google.Min Jump Arrays",
+        "documentation": {}
+    },
+    {
+        "label": "size",
+        "kind": 5,
+        "importPath": "Google.Min Jump Arrays",
+        "description": "Google.Min Jump Arrays",
+        "peekOfCode": "size = len(arr)\nprint('Minimum number of jumps to reach',\n      'end is', minJumps(arr, size))\n# This code is contributed by Soumen Ghosh",
+        "detail": "Google.Min Jump Arrays",
+        "documentation": {}
+    },
+    {
+        "label": "ispalindrome",
+        "kind": 2,
+        "importPath": "Google.Palidrome Partition",
+        "description": "Google.Palidrome Partition",
+        "peekOfCode": "def ispalindrome(input, start, end):\n    # Using two pointer technique to check palindrome\n    while (start < end):\n        if (input[start] != input[end]):\n            return False\n        start += 1\n        end -= 1\n    return True\n# Function to find keys for the Hashmap\ndef convert(a, b):",
+        "detail": "Google.Palidrome Partition",
+        "documentation": {}
+    },
+    {
+        "label": "convert",
+        "kind": 2,
+        "importPath": "Google.Palidrome Partition",
+        "description": "Google.Palidrome Partition",
+        "peekOfCode": "def convert(a, b):\n    return str(a) + str(b)\n# Returns the minimum number of cuts needed to partition a string\n# such that every part is a palindrome\ndef minpalparti_memo(input, i, j, memo):\n    if (i > j):\n        return 0\n    # Key for the Input String\n    ij = convert(i, j)\n    # If the no of partitions for string \"ij\" is already calculated",
+        "detail": "Google.Palidrome Partition",
+        "documentation": {}
+    },
+    {
+        "label": "minpalparti_memo",
+        "kind": 2,
+        "importPath": "Google.Palidrome Partition",
+        "description": "Google.Palidrome Partition",
+        "peekOfCode": "def minpalparti_memo(input, i, j, memo):\n    if (i > j):\n        return 0\n    # Key for the Input String\n    ij = convert(i, j)\n    # If the no of partitions for string \"ij\" is already calculated\n    # then return the calculated value using the Hashmap\n    if (ij in memo):\n        return memo[ij]\n    # Every String of length 1 is a palindrome",
+        "detail": "Google.Palidrome Partition",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "Google.Ways to Split String",
         "description": "Google.Ways to Split String",
         "peekOfCode": "class Solution:\n    def numSplits(self, s: str) -> int:\n            res = 0\n            f_right, f_left = {}, {}\n            for c in s:\n                f_right[c] = 1 + f_right.get(c, 0)\n            print(f_right)\n            for c in s:\n                f_left[c] = 1 + f_left.get(c, 0)\n                f_right[c] -= 1",
         "detail": "Google.Ways to Split String",
+        "documentation": {}
+    },
+    {
+        "label": "wordBreak",
+        "kind": 2,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "def wordBreak(s, dictionary):\n\t# create a dp table to store results of subproblems\n\t# value of dp[i] will be true if string s can be segmented\n\t# into dictionary words from 0 to i.\n\tdp = [False for i in range(len(s) + 1)]\n\t# dp[0] is true because an empty string can always be segmented.\n\tdp[0] = True\n\tfor i in range(len(s) + 1):\n\t\tfor j in range(i):\n\t\t\tif dp[j] and s[j: i] in dictionary:",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "\tdp",
+        "kind": 5,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "\tdp = [False for i in range(len(s) + 1)]\n\t# dp[0] is true because an empty string can always be segmented.\n\tdp[0] = True\n\tfor i in range(len(s) + 1):\n\t\tfor j in range(i):\n\t\t\tif dp[j] and s[j: i] in dictionary:\n\t\t\t\tdp[i] = True\n\t\t\t\tbreak\n\treturn dp[len(s)]\n# driver code",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "\tdp[0]",
+        "kind": 5,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "\tdp[0] = True\n\tfor i in range(len(s) + 1):\n\t\tfor j in range(i):\n\t\t\tif dp[j] and s[j: i] in dictionary:\n\t\t\t\tdp[i] = True\n\t\t\t\tbreak\n\treturn dp[len(s)]\n# driver code\ndictionary = [ \"mobile\", \"samsung\", \"sam\", \"sung\", \"man\", \"mango\", \"icecream\", \"and\", \"go\", \"i\", \"like\", \"ice\", \"cream\" ]\ndict = set()",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\tdp[i]",
+        "kind": 5,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "\t\t\t\tdp[i] = True\n\t\t\t\tbreak\n\treturn dp[len(s)]\n# driver code\ndictionary = [ \"mobile\", \"samsung\", \"sam\", \"sung\", \"man\", \"mango\", \"icecream\", \"and\", \"go\", \"i\", \"like\", \"ice\", \"cream\" ]\ndict = set()\nfor s in dictionary:\n\tdict.add(s)\nif (wordBreak(\"ilikesamsung\", dict)):\n\tprint(\"Yes\")",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "dictionary",
+        "kind": 5,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "dictionary = [ \"mobile\", \"samsung\", \"sam\", \"sung\", \"man\", \"mango\", \"icecream\", \"and\", \"go\", \"i\", \"like\", \"ice\", \"cream\" ]\ndict = set()\nfor s in dictionary:\n\tdict.add(s)\nif (wordBreak(\"ilikesamsung\", dict)):\n\tprint(\"Yes\")\nelse :\n\tprint(\"No\")\nif (wordBreak(\"iiiiiiii\", dict)):\n\tprint(\"Yes\")",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "dict",
+        "kind": 5,
+        "importPath": "Google.Word Break",
+        "description": "Google.Word Break",
+        "peekOfCode": "dict = set()\nfor s in dictionary:\n\tdict.add(s)\nif (wordBreak(\"ilikesamsung\", dict)):\n\tprint(\"Yes\")\nelse :\n\tprint(\"No\")\nif (wordBreak(\"iiiiiiii\", dict)):\n\tprint(\"Yes\")\nelse:",
+        "detail": "Google.Word Break",
+        "documentation": {}
+    },
+    {
+        "label": "dijkstra",
+        "kind": 2,
+        "importPath": "Graphs Traversal.dijkstra",
+        "description": "Graphs Traversal.dijkstra",
+        "peekOfCode": "def dijkstra(edges, f, t):\n    g = defaultdict(list)\n    for l, r, c in edges:\n        g[l].append((c, r))\n    q = [(0, f, ())]\n    seen = set()\n    mins = {f: 0}\n    while q:\n        # Remove the smallest element from the heap, and maintaining th heap variant\n        (cost, v1, path) = heappop(q)",
+        "detail": "Graphs Traversal.dijkstra",
         "documentation": {}
     },
     {
